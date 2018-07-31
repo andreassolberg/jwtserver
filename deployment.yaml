@@ -1,20 +1,24 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: jwtserver-localhost
+  name: jwtserver-application
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: jwtserver-localhost
+        app: jwtserver-application
     spec:
       containers:
       - name: master
         image: andreassolberg/jwtserver:latest  # or just image: redishello:1.0
         env:
-        - name: DEMO_GREETING
-          value: "Hello from the environment"
+        - name: ESSOURCE
+          value: "serviceprovider"
+        - name: ISSUER
+          value: "https://serviceprovider.andreas.labs.uninett.no/application1007"
+        - name: KEY
+          value: "key1"
         resources:
           requests:
             cpu: 10m
@@ -25,16 +29,16 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: jwtserver-localhost
+  name: jwtserver-application
   labels:
-    app: jwtserver-localhost
+    app: jwtserver-application
 spec:
   type: NodePort
   ports:
     - port: 3000
       protocol: TCP
   selector:
-    app: jwtserver-localhost
+    app: jwtserver-application
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
@@ -51,8 +55,12 @@ spec:
       - name: master
         image: andreassolberg/jwtserver:latest
         env:
-        - name: DEMO_GREETING
-          value: "Hello from the environment"
+        - name: ESSOURCE
+          value: "ntnu"
+        - name: ISSUER
+          value: "https://ntnu.andreas.labs.uninett.no/"
+        - name: KEY
+          value: "ntnu"
         resources:
           requests:
             cpu: 10m

@@ -1,6 +1,6 @@
 {
   "_": {
-    "comment": "Yay, I am allowed to sign statements about myself.",
+    "comment": "Yay, I am allowed to sign statements about myself."
   },
   "https://ntnu.andreas.labs.uninett.no/": {
     "authorityHints": ["https://feide.andreas.labs.uninett.no/jwtfederation"],
