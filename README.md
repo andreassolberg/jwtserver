@@ -20,14 +20,14 @@ kubectl apply -f deployment.yaml
 
 Clean up
 ```
-kubectl delete deployments jwtserver-localhost jwtserver-ntnu
-kubectl delete services jwtserver-localhost jwtserver-ntnu
+kubectl delete deployments jwtserver-application jwtserver-ntnu
+kubectl delete services jwtserver-application jwtserver-ntnu
 ```
 
 
 Restart, and load new version:
 
 ```
-kubectl delete deployments jwtserver-localhost jwtserver-ntnu
+kubectl delete deployments jwtserver-application jwtserver-ntnu
 kubectl apply -f deployment.yaml
 ```
