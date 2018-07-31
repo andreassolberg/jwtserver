@@ -1,6 +1,12 @@
 # JWT Server
 
 
+A proof of concept implementation of a service that implements webfinger and serves as a JWT Federation entity.
+
+**DEMO ONLY**
+
+Demo certificates including private keys included.
+
 
 Build
 
