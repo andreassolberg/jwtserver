@@ -7,13 +7,10 @@ A proof of concept implementation of a service that implements webfinger and ser
 
 Demo certificates including private keys included.
 
+Automatically published to
 
-Build
+* <https://hub.docker.com/r/andreassolberg/jwtserver>
 
-```
-docker build -t andreassolberg/jwtserver -t v1.0.2 .
-docker push andreassolberg/jwtserver
-```
 
 Setup
 
