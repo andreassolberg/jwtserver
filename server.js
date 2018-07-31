@@ -9,7 +9,7 @@ const
 nconf.argv()
   .env({
     "separator": '__',
-
+    "lowerCase": true
   })
   .file({ file: 'etc/config.json' })
 
