@@ -1,0 +1,19 @@
+{
+  "_": {
+    "comment": "Yay, I am allowed to sign statements about myself.",
+  },
+  "https://feide.andreas.labs.uninett.no/jwtfederation": {
+    "authorityHints": ["https://edugain.andreas.labs.uninett.no/openid"],
+    "subTypes": ["samlProvider", "openidProvider", "openidClient"],
+    "metadata": {
+      "openidProvider": {
+          "userTLDs": ["no"],
+          "id_token_signing_alg_values_supported": ["RS384", "RS512", "ES512"]
+      },
+      "openidClient": {
+        "scopes": ["openid", "email", "edugain", "bar"]
+      }
+    },
+    "_jwk": "feide"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "_": {
+    "comment": "Yay, I am allowed to sign statements about myself.",
+  },
+  "https://edugain.andreas.labs.uninett.no/openid": {
+    "subTypes": ["openidProvider", "openidClient", "openidClient"],
+    "metadata": {
+      "openidClient": {
+        "special": true
+      }
+    },
+    "_jwk": "edugain"
+  }
+}
