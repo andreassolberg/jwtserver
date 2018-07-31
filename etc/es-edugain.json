@@ -2,7 +2,7 @@
   "_": {
     "comment": "Yay, I am allowed to sign statements about myself."
   },
-  "https://edugain.andreas.labs.uninett.no/openid": {
+  "https://feide.andreas.labs.uninett.no/jwtfederation": {
     "subTypes": ["openidProvider", "openidClient", "openidClient"],
     "metadata": {
       "openidClient": {

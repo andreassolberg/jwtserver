@@ -12,7 +12,7 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: jwtserver-localhost
+          serviceName: jwtserver-application
           servicePort: 3000
   - host: ntnu.andreas.labs.uninett.no
     http:
@@ -20,48 +20,48 @@ spec:
       - backend:
           serviceName: jwtserver-ntnu
           servicePort: 3000
-  - host: feide.andreas.labs.uninett.no
-    http:
-      paths:
-      - backend:
-          serviceName: jwtserver-feide
-          servicePort: 3000
-  - host: edugain.andreas.labs.uninett.no
-    http:
-      paths:
-      - backend:
-          serviceName: jwtserver-edugain
-          servicePort: 3000
+  # - host: feide.andreas.labs.uninett.no
+  #   http:
+  #     paths:
+  #     - backend:
+  #         serviceName: jwtserver-feide
+  #         servicePort: 3000
+  # - host: edugain.andreas.labs.uninett.no
+  #   http:
+  #     paths:
+  #     - backend:
+  #         serviceName: jwtserver-edugain
+  #         servicePort: 3000
   - host: ti.andreas.labs.uninett.no
     http:
       paths:
       - backend:
           serviceName: dataporten-tokenissuer
           servicePort: 3000
-  - host: demo-api.andreas.labs.uninett.no
-    http:
-      paths:
-      - backend:
-          serviceName: dataporten-demoapi
-          servicePort: 3000
+  # - host: demo-api.andreas.labs.uninett.no
+  #   http:
+  #     paths:
+  #     - backend:
+  #         serviceName: dataporten-demoapi
+  #         servicePort: 3000
   - host: k8.andreas.labs.uninett.no
     http:
       paths:
       - backend:
           serviceName: k8authclient
           servicePort: 3000
-  - host: idp.andreas.labs.uninett.no
-    http:
-      paths:
-      - backend:
-          serviceName: feideidpdev
-          servicePort: 80
-  - host: sp.andreas.labs.uninett.no
-    http:
-      paths:
-      - backend:
-          serviceName: feidespdev
-          servicePort: 80
+  # - host: idp.andreas.labs.uninett.no
+  #   http:
+  #     paths:
+  #     - backend:
+  #         serviceName: feideidpdev
+  #         servicePort: 80
+  # - host: sp.andreas.labs.uninett.no
+  #   http:
+  #     paths:
+  #     - backend:
+  #         serviceName: feidespdev
+  #         servicePort: 80
   - host: openid.andreas.labs.uninett.no
     http:
       paths:
