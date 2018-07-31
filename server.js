@@ -7,7 +7,10 @@ const
 
 
 nconf.argv()
-  .env('__')
+  .env({
+    "separator": '__',
+
+  })
   .file({ file: 'etc/config.json' })
 
 const app = express()
