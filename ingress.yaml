@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: andreassolberg-ingress
+  name: andreassolberg-ingress2
   namespace: default
 spec:
   backend:

@@ -7,7 +7,7 @@ const
 
 
 nconf.argv()
-  .env()
+  .env('__')
   .file({ file: 'etc/config.json' })
 
 const app = express()
@@ -52,5 +52,10 @@ app.get('/federation-api/entitystatements', function (req, res, next) {
 
 })
 
+app.get('/', function (req, res, next) {
+  res.json({
+    "status": true
+  })
+})
 
 app.listen(nconf.get('port'), () => console.log('Example app listening on port 3000!'))

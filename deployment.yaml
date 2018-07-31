@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: master
-        image: andreassolberg/jwtserver  # or just image: redishello:1.0
+        image: andreassolberg/jwtserver:latest  # or just image: redishello:1.0
         env:
         - name: DEMO_GREETING
           value: "Hello from the environment"
@@ -49,7 +49,7 @@ spec:
     spec:
       containers:
       - name: master
-        image: andreassolberg/jwtserver  # or just image: redis
+        image: andreassolberg/jwtserver:latest
         env:
         - name: DEMO_GREETING
           value: "Hello from the environment"
