@@ -1,0 +1,75 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: jwtserver-localhost
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jwtserver-localhost
+    spec:
+      containers:
+      - name: master
+        image: andreassolberg/jwtserver  # or just image: redishello:1.0
+        env:
+        - name: DEMO_GREETING
+          value: "Hello from the environment"
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jwtserver-localhost
+  labels:
+    app: jwtserver-localhost
+spec:
+  type: NodePort
+  ports:
+    - port: 3000
+      protocol: TCP
+  selector:
+    app: jwtserver-localhost
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: jwtserver-ntnu
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jwtserver-ntnu
+    spec:
+      containers:
+      - name: master
+        image: andreassolberg/jwtserver  # or just image: redis
+        env:
+        - name: DEMO_GREETING
+          value: "Hello from the environment"
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jwtserver-ntnu
+  labels:
+    app: jwtserver-ntnu
+spec:
+  type: NodePort
+  ports:
+    - port: 3000
+      protocol: TCP
+  selector:
+    app: jwtserver-ntnu

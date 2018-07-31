@@ -1,0 +1,54 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: andreassolberg-ingress
+  namespace: default
+spec:
+  backend:
+    serviceName: dataporten-tokenissuer
+    servicePort: 3000
+  rules:
+  - host: serviceprovider.andreas.labs.uninett.no
+    http:
+      paths:
+      - backend:
+          serviceName: jwtserver-localhost
+          servicePort: 3000
+  - host: ti.andreas.labs.uninett.no
+    http:
+      paths:
+      - backend:
+          serviceName: dataporten-tokenissuer
+          servicePort: 3000
+  - host: demo-api.andreas.labs.uninett.no
+    http:
+      paths:
+      - backend:
+          serviceName: dataporten-demoapi
+          servicePort: 3000
+  - host: k8.andreas.labs.uninett.no
+    http:
+      paths:
+      - backend:
+          serviceName: k8authclient
+          servicePort: 3000
+  - host: idp.andreas.labs.uninett.no
+    http:
+      paths:
+      - backend:
+          serviceName: feideidpdev
+          servicePort: 80
+  - host: sp.andreas.labs.uninett.no
+    http:
+      paths:
+      - backend:
+          serviceName: feidespdev
+          servicePort: 80
+  - host: openid.andreas.labs.uninett.no
+    http:
+      paths:
+      - backend:
+          serviceName: oictoolkit
+          servicePort: 80
+  tls:
+  - secretName: tls
