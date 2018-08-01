@@ -1,6 +1,7 @@
 {
   "_": {
     "comment": "Yay, I am allowed to sign statements about myself.",
+    "authorityHints": ["https://ntnu.andreas.labs.uninett.no/"],
     "_jwk": "key1",
     "subTypes": ["openidClient"],
     "openidClient": {
