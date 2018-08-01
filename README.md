@@ -28,6 +28,6 @@ kubectl delete services jwtserver-application jwtserver-ntnu
 Restart, and load new version:
 
 ```
-kubectl delete deployments jwtserver-application jwtserver-ntnu
+kubectl delete deployments jwtserver-application jwtserver-ntnu jwtserver-feide jwtserver-edugain
 kubectl apply -f deployment.yaml
 ```

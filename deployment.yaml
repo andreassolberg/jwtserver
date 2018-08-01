@@ -81,3 +81,87 @@ spec:
       protocol: TCP
   selector:
     app: jwtserver-ntnu
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: jwtserver-feide
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jwtserver-feide
+    spec:
+      containers:
+      - name: master
+        image: andreassolberg/jwtserver:latest
+        env:
+        - name: ESSOURCE
+          value: "feide"
+        - name: ISSUER
+          value: "https://feide.andreas.labs.uninett.no/jwtfederation"
+        - name: KEY
+          value: "feide"
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jwtserver-feide
+  labels:
+    app: jwtserver-feide
+spec:
+  type: NodePort
+  ports:
+    - port: 3000
+      protocol: TCP
+  selector:
+    app: jwtserver-feide
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: jwtserver-edugain
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jwtserver-edugain
+    spec:
+      containers:
+      - name: master
+        image: andreassolberg/jwtserver:latest
+        env:
+        - name: ESSOURCE
+          value: "edugain"
+        - name: ISSUER
+          value: "https://edugain.andreas.labs.uninett.no/openid"
+        - name: KEY
+          value: "edugain"
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jwtserver-edugain
+  labels:
+    app: jwtserver-edugain
+spec:
+  type: NodePort
+  ports:
+    - port: 3000
+      protocol: TCP
+  selector:
+    app: jwtserver-edugain

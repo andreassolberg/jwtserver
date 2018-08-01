@@ -20,6 +20,18 @@ spec:
       - backend:
           serviceName: jwtserver-ntnu
           servicePort: 3000
+  - host: feide.andreas.labs.uninett.no
+    http:
+      paths:
+      - backend:
+          serviceName: jwtserver-feide
+          servicePort: 3000
+  - host: edugain.andreas.labs.uninett.no
+    http:
+      paths:
+      - backend:
+          serviceName: jwtserver-edugain
+          servicePort: 3000
   # - host: feide.andreas.labs.uninett.no
   #   http:
   #     paths:
