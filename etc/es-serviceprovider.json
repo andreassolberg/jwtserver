@@ -14,7 +14,7 @@
     "subTypes": ["samlProvider", "openidProvider"],
     "metadata": {
       "openidClient": {
-        "scopes": ["openid", "email", "edugain"]
+        "redirect_uris": ["https://localhost:8888/callback"]
       }
     },
     "_jwk": "key1"

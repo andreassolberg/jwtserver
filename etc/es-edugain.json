@@ -6,7 +6,7 @@
     "subTypes": ["openidProvider", "openidClient", "openidClient"],
     "metadata": {
       "openidClient": {
-        "special": true
+        "scopes": ["openid", "email", "foo", "edugain", "bar"]
       }
     },
     "_jwk": "feide"

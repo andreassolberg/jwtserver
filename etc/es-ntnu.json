@@ -11,7 +11,13 @@
           "id_token_signing_alg_values_supported": ["RS384", "RS512", "ES512"]
       },
       "openidClient": {
-        "scopes": ["openid", "email", "edugain", "bar"]
+        "client_id": "https://serviceprovider.andreas.labs.uninett.no/application1007",
+        "client_name": "NTNU Blackboard",
+        "application_type": "web",
+        "technical_contact": "tech-support@ntnu.no",
+        "grant_types_supported": ["authorization_code"],
+        "redirect_uri_prefixes": ["https://blackboard.ntnu.no/", "https://localhost:8888/"],
+        "scopes": ["openid", "email"]
       }
     },
     "_jwk": "key1"
