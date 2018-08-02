@@ -14,6 +14,6 @@
         "scopes": ["openid", "email", "edugain", "bar"]
       }
     },
-    "_jwk": "feide"
+    "_jwk": "ntnu"
   }
 }
