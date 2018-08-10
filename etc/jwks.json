@@ -118,5 +118,17 @@
     ],
     "ext": true,
     "kid": "ntnu"
+  },
+  {
+    "kty": "RSA",
+    "use": "sig",
+    "alg": "RS256",
+    "n": "0mdnlTk1wrnyTriAChIdmVwjauxHKg3W9Sbw8IasDyD3HkaUpAnFo4mxWpi3eiSu41FkauDOywGSJIc7TtD_boNJonvdhDft0E2UD0ok_yJn0aVHPSW5LHCZrpQ18yEbEYjoPpdCJd6iOY6itc1iT519T0kFzjxDD7hbydc_fs8Mf-6ielgs3ifjVlxKOdzQJxK1OuDW99sC2pCJnB9cF94j6Qt3XlrYrwvwUGmZ8MykbX7RcM8RFtaNnHaD11WNVlfwi3wEyCsCzZ0hmVYIusJcnA9J5-X9Xtlop9K2buW1NURNz5bo6XcdDAEV8tMc9S023sVzHY1TacXoKOTsWw",
+    "e": "AQAB",
+    "key_ops": [
+      "verify"
+    ],
+    "ext": true,
+    "kid": "idp"
   }
 ]
