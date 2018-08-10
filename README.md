@@ -11,7 +11,6 @@ Automatically published to
 
 * <https://hub.docker.com/r/andreassolberg/jwtserver>
 
-
 Test locally:
 
 ```
@@ -29,7 +28,6 @@ Clean up
 kubectl delete deployments jwtserver-application jwtserver-ntnu
 kubectl delete services jwtserver-application jwtserver-ntnu
 ```
-
 
 Restart, and load new version:
 
