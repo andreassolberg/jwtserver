@@ -21,5 +21,19 @@
       }
     },
     "_jwk": "key1"
+  },
+  "https://jwt-client.andreas.labs.uninett.no/yay": {
+    "authorityHints": ["https://feide.andreas.labs.uninett.no/jwtfederation"],
+    "subTypes": ["openidClient"],
+    "metadata": {
+      "openidClient": {
+        "client_name": "NTNU Cool service",
+        "application_type": "web",
+        "technical_contact": "tech-support@ntnu.no",
+        "redirect_uri_prefixes": ["https://blackboard.ntnu.no/", "https://localhost:8888/"],
+        "scopes": ["openid", "email"]
+      }
+    },
+    "_jwk": "key1"
   }
 }
