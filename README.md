@@ -12,6 +12,12 @@ Automatically published to
 * <https://hub.docker.com/r/andreassolberg/jwtserver>
 
 
+Test locally:
+
+```
+ISSUER=http://localhost:3000/ ESSOURCE=feide npm start
+```
+
 Setup
 
 ```
