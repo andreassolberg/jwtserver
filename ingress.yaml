@@ -8,6 +8,18 @@ spec:
     serviceName: dataporten-tokenissuer
     servicePort: 3000
   rules:
+  - host: jwt-client.andreas.labs.uninett.no
+    http:
+      paths:
+      - backend:
+          serviceName: jwtfed-client
+          servicePort: 3000
+  - host: idp.andreas.labs.uninett.no
+    http:
+      paths:
+      - backend:
+          serviceName: jwtserver-provider
+          servicePort: 3000
   - host: serviceprovider.andreas.labs.uninett.no
     http:
       paths:
