@@ -3,14 +3,13 @@
     "comment": "Yay, I am allowed to sign statements about myself."
   },
   "https://ntnu.andreas.labs.uninett.no/": {
-    "authorityHints": ["https://edugain.andreas.labs.uninett.no/openid"],
-    "subTypes": ["samlProvider", "openidProvider", "openidClient"],
+    "authority_hints": ["https://edugain.andreas.labs.uninett.no/openid"],
     "metadata": {
-      "openidProvider": {
+      "openid_provider": {
           "userTLDs": ["no"],
           "id_token_signing_alg_values_supported": ["RS384", "RS512", "ES512"]
       },
-      "openidClient": {
+      "openid_client": {
         "application_type": "web",
         "technical_contact": "tech-support@ntnu.no",
         "grant_types_supported": ["authorization_code"],
@@ -21,14 +20,13 @@
     "_jwk": "ntnu"
   },
   "https://idp.andreas.labs.uninett.no/": {
-    "authorityHints": ["https://edugain.andreas.labs.uninett.no/openid"],
-    "subTypes": ["openidProvider", "openidClient"],
+    "authority_hints": ["https://edugain.andreas.labs.uninett.no/openid"],
     "metadata": {
-      "openidProvider": {
+      "openid_provider": {
           "userTLDs": ["no"],
           "id_token_signing_alg_values_supported": ["RS384", "RS512", "ES512"]
       },
-      "openidClient": {
+      "openid_client": {
         "scopes": ["openid", "email"]
       }
     },

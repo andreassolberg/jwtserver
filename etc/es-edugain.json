@@ -3,9 +3,8 @@
     "comment": "Yay, I am allowed to sign statements about myself."
   },
   "https://feide.andreas.labs.uninett.no/jwtfederation": {
-    "subTypes": ["openidProvider", "openidClient", "openidClient"],
     "metadata": {
-      "openidClient": {
+      "openid_client": {
         "scopes": ["openid", "email", "foo", "edugain", "bar"]
       }
     },

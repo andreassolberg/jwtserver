@@ -3,14 +3,13 @@
     "comment": "Yay, I am allowed to sign statements about myself."
   },
   "https://serviceprovider.andreas.labs.uninett.no/application1007": {
-    "authorityHints": ["https://feide.andreas.labs.uninett.no/jwtfederation"],
-    "subTypes": ["samlProvider", "openidProvider", "openidClient"],
+    "authority_hints": ["https://feide.andreas.labs.uninett.no/jwtfederation"],
     "metadata": {
-      "openidProvider": {
+      "openid_provider": {
           "userTLDs": ["no"],
           "id_token_signing_alg_values_supported": ["RS384", "RS512", "ES512"]
       },
-      "openidClient": {
+      "openid_client": {
         "client_id": "https://serviceprovider.andreas.labs.uninett.no/application1007",
         "client_name": "NTNU Blackboard",
         "application_type": "web",
@@ -23,10 +22,9 @@
     "_jwk": "key1"
   },
   "https://jwt-client.andreas.labs.uninett.no/yay": {
-    "authorityHints": ["https://feide.andreas.labs.uninett.no/jwtfederation"],
-    "subTypes": ["openidClient"],
+    "authority_hints": ["https://feide.andreas.labs.uninett.no/jwtfederation"],
     "metadata": {
-      "openidClient": {
+      "openid_client": {
         "client_name": "NTNU Cool service",
         "application_type": "web",
         "technical_contact": "tech-support@ntnu.no",

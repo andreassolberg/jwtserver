@@ -2,54 +2,49 @@
   "_": {
     "comment": "Yay, I am allowed to sign statements about myself.",
     "_jwk": "key1",
-    "subTypes": ["openidClient"],
-    "openidClient": {
+    "openid_client": {
       "scopes": ["openid", "email", "edugain", "special", "limited", "yay"]
     }
   },
   "https://serviceprovider.andreas.labs.uninett.no/application1007": {
-    "authorityHints": ["https://ntnu.no/"],
+    "authority_hints": ["https://ntnu.no/"],
     "leafNode": true,
-    "subTypes": ["samlProvider", "openidProvider"],
     "metadata": {
-      "openidClient": {
+      "openid_client": {
         "scopes": ["openid", "email", "edugain"]
       }
     },
     "_jwk": "key1"
   },
   "https://ntnu.no/": {
-    "authorityHints": ["https://feide.no/"],
-    "subTypes": ["samlProvider", "openidProvider", "openidClient"],
+    "authority_hints": ["https://feide.no/"],
     "metadata": {
       "openidProvider": {
           "userTLDs": ["no"],
           "id_token_signing_alg_values_supported": ["RS384", "RS512", "ES512"]
       },
-      "openidClient": {
+      "openid_client": {
         "scopes": ["openid", "email", "edugain", "bar"]
       }
     },
     "_jwk": "ntnu"
   },
   "https://feide.no/": {
-    "authorityHints": ["https://edugain.org/"],
-    "subTypes": ["samlProvider", "openidProvider", "openidClient"],
+    "authority_hints": ["https://edugain.org/"],
     "metadata": {
-      "openidProvider": {
+      "openid_provider": {
           "userTLDs": ["no"],
           "id_token_signing_alg_values_supported": ["RS384", "RS512", "ES512"]
       },
-      "openidClient": {
+      "openid_client": {
         "scopes": ["openid", "email", "edugain", "bar"]
       }
     },
     "_jwk": "feide"
   },
   "https://edugain.org/": {
-    "subTypes": ["openidProvider", "openidClient", "openidClient"],
     "metadata": {
-      "openidClient": {
+      "openid_client": {
         "special": true
       }
     },
