@@ -3,7 +3,9 @@
     "comment": "Yay, I am allowed to sign statements about myself."
   },
   "https://ntnu.andreas.labs.uninett.no/": {
-    "authority_hints": ["https://edugain.andreas.labs.uninett.no/openid"],
+    "authority_hints": {
+      "https://edugain.andreas.labs.uninett.no/openid": []
+    },
     "metadata": {
       "openid_provider": {
           "userTLDs": ["no"],
@@ -20,7 +22,9 @@
     "_jwk": "ntnu"
   },
   "https://idp.andreas.labs.uninett.no/": {
-    "authority_hints": ["https://edugain.andreas.labs.uninett.no/openid"],
+    "authority_hints": {
+      "https://edugain.andreas.labs.uninett.no/openid": []
+    },
     "metadata": {
       "openid_provider": {
           "userTLDs": ["no"],

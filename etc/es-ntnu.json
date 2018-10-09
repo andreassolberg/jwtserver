@@ -3,7 +3,9 @@
     "comment": "Yay, I am allowed to sign statements about myself."
   },
   "https://serviceprovider.andreas.labs.uninett.no/application1007": {
-    "authority_hints": ["https://feide.andreas.labs.uninett.no/jwtfederation"],
+    "authority_hints": {
+      "https://feide.andreas.labs.uninett.no/jwtfederation": []
+    },
     "metadata": {
       "openid_provider": {
           "userTLDs": ["no"],
@@ -22,7 +24,9 @@
     "_jwk": "key1"
   },
   "https://jwt-client.andreas.labs.uninett.no/yay": {
-    "authority_hints": ["https://feide.andreas.labs.uninett.no/jwtfederation"],
+    "authority_hints": {
+      "https://feide.andreas.labs.uninett.no/jwtfederation": []
+    },
     "metadata": {
       "openid_client": {
         "client_name": "NTNU Cool service",

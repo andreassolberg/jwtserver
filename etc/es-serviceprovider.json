@@ -1,14 +1,18 @@
 {
   "_": {
     "comment": "Yay, I am allowed to sign statements about myself.",
-    "authority_hints": ["https://ntnu.andreas.labs.uninett.no/"],
+    "authority_hints": {
+      "https://ntnu.andreas.labs.uninett.no/": []
+    },
     "_jwk": "key1",
     "openid_client": {
       "scopes": ["openid", "email", "edugain", "special", "limited", "yay"]
     }
   },
   "https://serviceprovider.andreas.labs.uninett.no/application1007": {
-    "authority_hints": ["https://ntnu.andreas.labs.uninett.no/"],
+    "authority_hints": {
+      "https://ntnu.andreas.labs.uninett.no/": []
+    },
     "leafNode": true,
     "metadata": {
       "openid_client": {
