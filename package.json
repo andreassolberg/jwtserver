@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "jwtfed": "^1.8.0",
+    "jwtfed": "^1.9.0",
     "morgan": "^1.9.1",
     "nconf": "^0.10.0"
   }
