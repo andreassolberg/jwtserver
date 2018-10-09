@@ -34,6 +34,28 @@ app.get('/.well-known/webfinger', function (req, res, next) {
 
 })
 
+app.get('/.well-known/openid-federation', function (req, res, next) {
+  webfinger.federationAPI(req.query)
+    .then((data) => {
+
+      if (typeof data === 'object') {
+        return res.json(data)
+      }
+
+      res.setHeader('content-type', 'application/json')
+      res.send([data])
+
+    })
+    .catch((err) => {
+      if (err instanceof NotFound) {
+        res.status(404).json({"header": "Could not find resource", "error": err.message})
+      }
+      res.status(500).json({"header": "Generic error", "error": err.message})
+    })
+
+})
+
+
 app.get('/federation-api/entitystatements', function (req, res, next) {
   webfinger.entitystatement(req.query)
     .then((data) => {
@@ -42,8 +64,8 @@ app.get('/federation-api/entitystatements', function (req, res, next) {
         return res.json(data)
       }
 
-      res.setHeader('content-type', 'application/jwt')
-      res.send(data)
+      res.setHeader('content-type', 'application/json')
+      res.send([data])
 
     })
     .catch((err) => {
