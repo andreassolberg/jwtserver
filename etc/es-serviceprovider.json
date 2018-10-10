@@ -5,8 +5,10 @@
       "https://ntnu.andreas.labs.uninett.no/": []
     },
     "_jwk": "key1",
-    "openid_client": {
-      "scopes": ["openid", "email", "edugain", "special", "limited", "yay"]
+    "metadata": {
+      "openid_client": {
+        "scopes": ["openid", "email", "edugain", "special", "limited", "yay"]
+      }
     }
   },
   "https://serviceprovider.andreas.labs.uninett.no/application1007": {
